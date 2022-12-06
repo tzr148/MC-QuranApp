@@ -2,6 +2,7 @@ package com.example.quranapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             int surahNo = Integer.parseInt(tbxSurah.getText().toString());
             int ayatNo = Integer.parseInt(tbxAyat.getText().toString());
+            if(surahNo>114 && surahNo<=0)
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+                builder.setMessage("You enter invalid surah/ayat number!");
+                builder.setTitle("Alert !");
+            }
             int startingVerse = a1.SSP[surahNo - 1];
             int verseInd = startingVerse + ayatNo - 1;
             String verseStr = txt.QuranArabicText[verseInd];
