@@ -1,7 +1,6 @@
 package com.example.quranapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     QDH a1 = new QDH();
 
-    QuranArabicText txt = new QuranArabicText();
+    QuranArabicText ayat = new QuranArabicText();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,9 +35,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             int surahNo = Integer.parseInt(tbxSurah.getText().toString());
             int ayatNo = Integer.parseInt(tbxAyat.getText().toString());
 
-            int startingVerse = a1.SSP[surahNo - 1];
-            int verseInd = startingVerse + ayatNo - 1;
-            String verseStr = txt.QuranArabicText[verseInd];
+            int startingAyat = a1.SSP[surahNo - 1];
+            int verseInd = startingAyat + ayatNo - 1;
+            String strAyat = ayat.QuranArabicText[verseInd];
             int i=0;
             while (i <30)
             {
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 i++;
             }
             tvxPara.setText(paraName);
-            tvxAyatDis.setText(verseStr);
+            tvxAyatDis.setText(strAyat);
         }
     }
 }
