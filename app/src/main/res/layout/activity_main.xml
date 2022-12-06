@@ -1,59 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvAyat"
-        android:layout_width="116dp"
-        android:layout_height="44dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="173dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="22dp"
+        android:text="Ayat No."
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/tnAyat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSurah" />
+
+    <TextView
+        android:id="@+id/tvSurah"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="25dp"
+        android:text="Surah No."
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/tvAyat"
+        app:layout_constraintEnd_toStartOf="@+id/tnSurah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tnAyat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="41dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="108dp" />
-    <TextView
-        android:id="@+id/tvSurah"
-        android:layout_width="116dp"
-        android:layout_height="44dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="108dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAyat"
+        app:layout_constraintTop_toBottomOf="@+id/tnSurah" />
 
     <EditText
         android:id="@+id/tnSurah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="41dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="108dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvSurah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvSurah" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="28dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="248dp" />
+        app:layout_constraintBottom_toTopOf="@+id/tvPara"
+        app:layout_constraintStart_toStartOf="@+id/tvPara"
+        app:layout_constraintTop_toBottomOf="@+id/tvAyat" />
 
     <TextView
         android:id="@+id/tvAyatDis"
-        android:layout_width="378dp"
-        android:layout_height="314dp"
+        android:layout_width="396dp"
+        android:layout_height="351dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="343dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPara" />
+
+    <TextView
+        android:id="@+id/tvPara"
+        android:layout_width="131dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="26dp"
+        android:text="Para"
+        app:layout_constraintBottom_toTopOf="@+id/tvAyatDis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
