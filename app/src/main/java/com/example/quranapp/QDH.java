@@ -2,7 +2,6 @@ package com.example.quranapp;
 
 import java.util.List;
 
-
 public class QDH {
     public int [] PSP = {
             1,
