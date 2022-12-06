@@ -10,26 +10,33 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btn;
-    TextView tbxSurah,tbxAyat,tvxAyatDis, tvxPara;
+
+    TextView tbxSurah, tbxAyat, tvxAyatDis, tvxPara;
+
     String paraName = "";
 
     QDH a1 = new QDH();
 
     QuranArabicText ayat = new QuranArabicText();
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+
         btn=findViewById(R.id.button);
         tbxSurah=findViewById(R.id.tnSurah);
         tbxAyat=findViewById(R.id.tnAyat);
         tvxAyatDis=findViewById(R.id.tvAyatDis);
         tvxPara=findViewById(R.id.tvPara);
+
         btn.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View view) {
+    public void onClick(View view)
+    {
         if(R.id.button == view.getId())
         {
             int surahNo = Integer.parseInt(tbxSurah.getText().toString());
