@@ -40,8 +40,8 @@
 
     <EditText
         android:id="@+id/tnAyat"
-        android:layout_width="69dp"
-        android:layout_height="50dp"
+        android:layout_width="68dp"
+        android:layout_height="43dp"
         android:layout_marginEnd="55dp"
         android:layout_marginBottom="305dp"
         android:ems="10"
@@ -53,16 +53,16 @@
 
     <TextView
         android:id="@+id/tvAyat"
-        android:layout_width="121dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="17dp"
+        android:layout_width="134dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="124dp"
         android:layout_marginBottom="31dp"
         android:text="Ayat No."
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/tvAyatDis"
-        app:layout_constraintEnd_toStartOf="@+id/tnAyat"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSurah" />
 
@@ -70,7 +70,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="248dp"
         android:text="Get Verse"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,6 +105,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPara" />
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="152dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginBottom="24dp"
+        android:text="Check Commit"
+        app:layout_constraintBottom_toTopOf="@+id/tvAyatDis"
+        app:layout_constraintStart_toStartOf="@+id/tvAyatDis"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

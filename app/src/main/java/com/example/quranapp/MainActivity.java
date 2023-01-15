@@ -2,6 +2,8 @@ package com.example.quranapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn;
+    Button btn, cmt;
 
     TextView tbxSurah, tbxAyat, tvxAyatDis, tvxPara;
 
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btn=findViewById(R.id.button);
+        cmt = findViewById(R.id.button2);
         tbxSurah=findViewById(R.id.tnSurah);
         tbxAyat=findViewById(R.id.tnAyat);
         tvxAyatDis=findViewById(R.id.tvAyatDis);
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View view)
@@ -56,6 +60,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             tvxPara.setText(paraName);
             tvxAyatDis.setText(strAyat);
+        }
+        else if(R.id.button2 == view.getId())
+        {
+            Uri uri = Uri.parse("");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         }
     }
 }
