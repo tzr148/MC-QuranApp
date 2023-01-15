@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn, cmt;
+    Button btn, cmt, cmt2;
 
     TextView tbxSurah, tbxAyat, tvxAyatDis, tvxPara;
 
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn=findViewById(R.id.button);
         cmt = findViewById(R.id.button2);
+///        cmt2 = findViewById(R.id.button3);
         tbxSurah=findViewById(R.id.tnSurah);
         tbxAyat=findViewById(R.id.tnAyat);
         tvxAyatDis=findViewById(R.id.tvAyatDis);
@@ -36,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn.setOnClickListener(this);
         cmt.setOnClickListener(this);
+//        cmt2.setOnClickListener(this);
     }
-
 
     @Override
     public void onClick(View view)
@@ -68,5 +69,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         }
+//        else if(R.id.button3 == view.getId())
+//        {
+//            Uri uri = Uri.parse("https://github.com/tzr148");
+//            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//            startActivity(intent);
+//        }
     }
 }
