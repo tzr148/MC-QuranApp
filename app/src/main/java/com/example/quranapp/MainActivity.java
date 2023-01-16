@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if(R.id.button2 == view.getId())
         {
-            Uri uri = Uri.parse("https://github.com/tzr148");
+            Uri uri = Uri.parse("https://github.com/tzr148/MC-QuranApp/commits/main");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         }
